@@ -7,17 +7,17 @@ mkdir cleaned formatted parsed
 
 # Initial parse of raw transcript files:
 for i in $( ls raw ); do
-    python3 parse_script.py raw/$i >parsed/$i
+    python parse_script.py raw/$i >parsed/$i
 done
 
 # Clean up parsed files so they can be formatted nicely:
 for i in $( ls parsed ); do
-    python3 clean_parsed.py parsed/$i >cleaned/$i
+    python clean_parsed.py parsed/$i >cleaned/$i
 done
 
 # Format the cleaned files into wiki markup:
 for i in $( ls cleaned ); do
-    python3 format_script.py cleaned/$i >formatted/$i
+    python format_script.py cleaned/$i >formatted/$i
 done
 
 # Take the output of every formatted file and concatenate them
