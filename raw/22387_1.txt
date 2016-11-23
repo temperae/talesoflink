@@ -1,0 +1,560 @@
+//イベントタイトル「部活」本編３−１
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 Sara
+// 3 リッピ
+// 4 Jude（chara116_100）
+// 5 Tear（chara118_100）
+// 6 Colette（chara114_101）
+// 7 Kratos（chara694_100）
+// 8 
+// 9 
+// 10 
+// 11 
+// 12 垣根
+// 13 
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆リッピのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+//BGM
+#bgm 44
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+//背景
+back script/bg/50
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+//++++++++++++++++++++++++ナレ消去++++++++++++++++++++++++
+
+namepos 45 733
+fontpos 45 800
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+buppos8 320 480
+bup8 script/player/chara695_2 //
+name Chiyo 255
+mes
+...
+
+
+#se 22
+
+timewait 20
+
+flush 255 255 255 9
+#se 16
+timewait 4      //タイミング調整のため
+
+timewait 30
+
+mes
+This is the last one...
+Thank you, Sara.
+
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+buppos6 320 480
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+buppos15 500 170
+bup15 script/eff/eff3.png
+action 1 15 8 16
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Oh! She hit with her last shot,
+just like you said, Kratos!
+In fact, she got closer to the
+bullseye than anyone!
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+So she did. Unfortunately, it's
+not about how close you get, but
+about how many of the four shots
+you land.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+buppos5 320 480
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 170
+action 1 15 8 16
+mes
+But maybe that's still good
+enough?
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Sara seems satisfied.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+Look, Chiyo's smiling! She looks
+like she really accomplished
+something!
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+buppos4 320 480
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+...
+
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+What's on your mind, Jude?
+You've been lost in thought
+for a while now.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+I'm just reconsidering what the
+awakening condition might be.
+
+mes
+From Sara and Chiyo's reaction,
+I'm no longer convinced that
+winning the competition or showing
+class unity is truly essential.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+I've been getting that sense as
+well.
+
+mes
+There's no doubt in my mind that it
+was Chiyo who set up this dream.
+
+mes
+I don't know if it's all some
+illusion created by some machine
+or what, but she looms large over
+this world.
+
+mes
+But while the situation had me
+unnerved at first, I'm growing more
+and more convinced that there's no
+malice here.
+
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+I don't think Chiyo is a bad
+person. In every event, she was
+out there rooting hard for all
+of us!
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+I agree.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+What I'm trying to say here is—
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+...That you believe this dream has
+fulfilled its purpose, and we'll
+be waking up soon?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Yes. I've been waiting it for to
+end ever since she landed that
+last arrow.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+Maybe we should go speak to Chiyo
+directly?
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+I think that would be a good idea.
+What do you say, GET[username]?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Yes, GET[username]...
+I'm eager to hear your take on
+this.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+As am I.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Indeed. You're the only one who
+hasn't played a major role in the
+dream yet.
+
+
+mes
+Perhaps your part is somehow the
+finale to all this?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#MFADE 20     //音楽のフェード停止
+
+bup2fadechg 8//フェードイン
+buppos2 320 490
+bup2 script/player/chara2_2 //
+name Sara 255
+mes
+That's correct.
+That's Chiyo's final wish.
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 430 230
+action 1 15 8 16
+action 1 4 6 4
+timewait 8
+action 5 4
+timewait 2
+mes
+Sara?!
+
+sub_bupdel 15
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 260
+action 1 15 8 16
+mes
+Huh? Where's Chiyo?
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_2_1 //
+name Sara 255
+mes
+She left a little while ago.
+And since my role was done...
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 170
+action 1 15 8 16
+mes
+Wait a minute... Your "role"...?
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+#bgm 10
+
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+mes
+Yeah, I'm finally back to my old
+self.
+I'm sorry it took me so long,
+guys!
+
+mes
+But I still remember the way Chiyo
+felt about all this...
+
+mes
+So I think I can probably answer
+most of your questions now.
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_2 //
+mes
+Right now, I know there's something
+Chiyo wants to give to
+GET[username]...
+
+bup2 script/player/chara2_2_1 //
+mes
+This dream will end whether you go
+to see her or not, but...
+
+bup2 script/player/chara2_2 //
+#voice 31 1
+mes
+I really hope that you'll do it,
+GET[username].
+It's just that—
+
+sub_bupdel 15
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+mes
+What?
+
+sub_bupdel 15
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_4 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 13 1
+mes
+...Thank you, GET[username].
+I knew you'd feel that way.
+
+bup2 script/player/chara2_5 //
+name Sara 255
+mes
+Chiyo is waiting for you out in
+the schoolyard.
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

@@ -1,0 +1,199 @@
+//===========================
+// ラビリンス
+//===========================
+
+// レイヤー構造
+// 1  予備
+// 15 感情eff1 Sara（！）
+// 14 メッセージ枠
+// 13 感情eff2 Sara（！）
+// 12 ローエン
+// 11 感情eff3 ミラ怒り
+// 10 ティボ
+// 9 感情eff4
+// 8 エリーゼ
+// 7 シング
+// 6 垣根
+// 5 ガルシア
+// 4 店員
+// 3 Lippy
+// 2 Sara
+// BG
+
+//===========================
+
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//♪♪♪ボイスパック指定♪♪♪
+#voicepack1 com_voice1
+#voicepack2 com_voice16_aekszsmr
+//ここまで基本定義
+//===========================
+
+//BGM
+#bgm 5
+
+//背景
+back script/bg/21
+backpos 320 556
+//座標ｘ、y
+
+//進行アイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+
+//文字色
+
+
+//メッセージ位置調整（セリフ用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+namepos 45 733
+fontpos 45 800
+
+//手前垣根
+bup13 script/event_frame01
+buppos6 320 480
+
+//==========================================
+fadechg 15  //FI
+timewait 10  //待機
+
+//==========================================
+//メッセージ枠（ちびキャラ5との座標関係に注意）
+
+bupeff14fadechg 8
+buppos14 0 0
+bupeffpos14 320 837
+bupeff14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bupeff2fadechg 8
+buppos2 0 0
+bupeffpos2 320 485
+bupeff2 script/player/chara2_0 //
+
+name Sara 255
+mes
+Where are we now?
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupeff3fadechg 8
+buppos3 0 0
+bupeffpos3 320 485
+bupeff3 script/player/chara1_0 //
+
+name Lippy 255
+#voice 97 1
+mes
+I'm not entirely sure...
+But it feels different from the
+other floors.
+And not in a good way.
+
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+
+
+flush 255 255 255 9
+#se 6
+
+
+bupeff6fadechg 40 //フェードイン
+buppos6 0 0
+bupeffpos6 320 485
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+mes
+Sor-ry.
+You're not supposed to be here.
+
+flush 255 255 255 9
+#se 6
+
+namedel
+bupeff6fadeout 40
+fadewait
+timewait 30      //タイミング調整のため
+
+
+bupeff3fadechg 8 //フェードイン
+bupeff3 script/player/chara1_0 //
+
+//リサヲラの台詞
+//-------------------------------
+name Lippy 255
+mes
+He's gone?
+Was that... a warning?
+
+//リサヲラバストアップ削除
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+
+bupeff2fadechg 8 //フェードイン
+bupeff2 script/player/chara2_3 //
+
+name Sara 255
+mes
+What do you think?
+If we push onward, we need
+to be ready for anything!
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+namedel
+bupeff14fadeout 8
+fadewait
+timewait 4
+
+
+#se 1
+//++++++++++++++++++++++++解説絵表示++++++++++++++++++++++++
+bupeff11fadechg 40 //フェードイン
+buppos11 0 0
+bupeffpos11 320 455
+bupeff11 script/player/ev0041_tut_02.png //
+
+mes
+
+//++++++++++++++++++++++++解説絵消去++++++++++++++++++++++++
+
+bupeff11fadeout 40
+fadewait
+timewait 40      //タイミング調整のため
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+bupdel
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

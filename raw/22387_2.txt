@@ -1,0 +1,885 @@
+//イベントタイトル「部活」本編３−２
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 背景
+// 3 Lippy
+// 4 Jude（chara116_100）
+// 5 Tear（chara118_100）
+// 6 Colette（chara114_101）
+// 7 Kratos（chara694_100）
+// 8 Chiyoちゃん
+// 9 Sara
+// 10 
+// 11 
+// 12 垣根
+// 13 
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆Lippyのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+//BGM
+#bgm 10
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+//背景
+back script/bg/50
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+//++++++++++++++++++++++++ナレ消去++++++++++++++++++++++++
+
+namepos 45 733
+fontpos 45 800
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+buppos9 320 480
+bup9 script/player/chara2_2 //
+name Sara 255
+mes
+This era in which Chiyo lived...
+I wonder how long ago it was?
+Even I don't have any insight on
+that.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+buppos5 320 480
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+I'd heard this region was once home
+to a small country with a unique
+and very sophisticated culture.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+name Sara 255
+mes
+Yeah. And Chiyo was just a normal
+girl, growing up in that country.
+The kind of girl you'd find
+anywhere.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+buppos6 320 480
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+And she had two close childhood
+friends, just like Lloyd and Genis
+were to me.
+
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+name Sara 255
+mes
+Yep. One was a pushy, meddlesome
+girl, and the other a mellow boy
+who couldn't wake up on time.
+
+bup9 script/player/chara2_1 //
+#voice 25 1
+mes
+But she had lots of other friends
+too. She never had any problems
+getting along with her classmates.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+I gather that Sports Day was
+her favorite part of school?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+name Sara 255
+mes
+It was. But it was also a source of
+stress for her...
+
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_4 //
+mes
+She'd started to develop feelings
+for the boy who was her childhood
+friend, but tried to hide them for
+a long time.
+
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+mes
+It got to the point where her best
+friend noticed, the entire class
+noticed—even their teacher noticed!
+
+mes
+So they all finally got together to
+push her to work up the courage to
+do it.
+
+bup9 script/player/chara2_1 //
+#voice 26 1
+name Sara 255
+mes
+They said if they could all team up
+and fight for a Sports Day victory,
+then she should be able to summon
+the strength to tell him her
+feelings.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+She must have had so much going
+through her head on Sports Day!
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+name Sara 255
+mes
+That's why she agreed to
+participate in the Sports Day
+archery competition, and vowed that
+if she hit one bullseye, she'd
+confess her feelings to him.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+Since everyone was rooting for her
+to finally do it, Sports Day became
+a huge deal to the class.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_1 //
+name Sara 255
+#voice 25 1
+mes
+They wanted it to be Chiyo's big
+day. That's what everyone was
+calling it.
+
+bup9 script/player/chara2_0 //
+name Sara 255
+mes
+Everyone practiced hard for their
+events, got a good night's sleep,
+and came to school early to
+practice some more.
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+But the big day never came,
+did it?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_2 //
+name Sara 255
+mes
+That's right. On what was supposed
+to be Sports Day, two major nations
+went to war, and Chiyo's small
+country got swept up in it.
+
+bup9 script/player/chara2_2_1 //
+mes
+The war was devastating. Chiyo lost
+everyone—her family, her
+classmates, her best girlfriend,
+her teacher, and the boy that she
+loved.
+
+bup9 script/player/chara2_2 //
+mes
+She was wounded herself, and
+running for her life, when she
+stumbled upon these ruins—a relic
+from an era that far predated her
+own.
+
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_3 //
+mes
+In those ruins, she found a device
+from the era of ancient magic that
+allowed people to share their
+dreams.
+
+mes
+She longed for the big day that
+fate had stolen from her. Even if
+it had to be just a dream...
+
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_2_1 //
+mes
+The device reacted to the strength
+of her desire, and activated
+itself.
+
+bup9 script/player/chara2_2 //
+mes
+The device must have run out of
+energy while it was projecting the
+dream, but I guess the dream
+remained within it.
+
+mes
+And then, centuries later...
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+buppos4 320 480
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+...The device reactivated, feeding
+off the magical energy of a group
+of travelers who had stumbled
+across the ruins and fallen asleep
+there.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+All so that Chiyo would get to have
+her "big day" at last...
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+What a heartbreaking story.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+A dream left behind by someone who
+lived ages ago... And now it's
+about to end.
+
+namedel
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 42
+timewait 48
+
+#MFADE 20     //音楽のフェード停止
+
+bup7fadeout 8
+
+//背景
+back script/bg/89_1
+backpos 320 556
+
+colfadechg 0 0 0 42
+timewait 40
+//=================================================
+
+#bgm 48
+
+bup8fadechg 8//フェードイン
+buppos8 320 480
+bup8 script/player/chara695_2 //
+
+scroll 200 480 60 8
+timewait 50
+
+name Chiyo 255
+mes
+...
+
+
+bupLR8 1
+
+
+scroll 500 480 40 8
+timewait 40
+
+mes
+...
+
+
+bupLR8 0
+
+
+scroll 320 480 30 8
+timewait 60
+
+#se 1
+buppos15 450 260
+bup15 script/eff/eff1.png
+action 1 15 8 16
+action 0 8 8 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...Oh!
+
+sub_bupdel 15
+
+
+mes
+Thank you for coming.
+
+mes
+Yes. I've been waiting here for
+a long time...
+
+mes
+Because there's something I've
+always wanted to tell you.
+
+mes
+And now the time has finally
+come.
+
+action 1 8 6 4
+timewait 8
+action 5 8
+timewait 2
+mes
+This is the happiest day of my
+life!
+
+namedel
+
+//================================================
+//黒フェードアウト
+colfadeout 255 255 255 60
+timewait 60
+
+bup8fadeout 8
+
+//背景
+back script/bg/16
+backpos 320 556
+
+
+#se 4
+//黒フェードイン
+colfadechg 255 255 255 100
+timewait 60
+
+//================================================
+
+bup3fadechg 8//フェードイン
+buppos3 320 480
+bup3 script/player/chara1_1 //
+name Lippy 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 300
+action 1 15 8 16
+#voice 79 1
+mes
+Oh! Great Savior!
+
+
+sub_bupdel 15
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+#voice 66 1
+mes
+Dear me!
+You've finally awakened!
+
+namedel
+bup3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_2 //
+name Sara 255
+action 0 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Mmm...
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_4 //
+name Jude 255
+action 0 4 6 4
+timewait 8
+action 5 4
+timewait 2
+mes
+Are... Are we awake?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_4 //
+name Tear 255
+mes
+This is reality...
+It's... It's over...
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_0 //
+name Kratos 255
+mes
+Are you okay, Colette?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_1 //
+name Colette 255
+mes
+Yes. I'm okay.
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup3fadechg 8//フェードイン
+bup3 script/player/chara1_1 //
+name Lippy 255
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+#voice 68 1
+mes
+You've all awakened!
+Oh, thank the Heavens!
+
+namedel
+bup3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#MFADE 20     //音楽のフェード停止
+
+//揺れ
+action 1 0 8 6
+timewait 14
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+mes
+Whoa...
+Do you feel that shaking?!
+
+sub_bupdel 15
+
+action 5 0
+timewait 1
+action 1 0 5 3
+timewait 14
+
+
+#bgm 13
+
+
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 230
+action 1 15 8 16
+mes
+It's getting stronger!
+
+sub_bupdel 15
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup3fadechg 8//フェードイン
+bup3 script/player/chara1_3 //
+name Lippy 255
+#voice 82 1
+mes
+This is exactly what I was afraid
+of! Now that their energy source
+has been depleted, the ruins are
+about to collapse!
+
+namedel
+bup3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_3 //
+name Sara 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+#voice 48 1
+mes
+What?! We gotta get outside!
+Come on guys, hurry!
+
+sub_bupdel 15
+namedel
+
+scroll -1000 480 30 9
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+action 5 0
+timewait 2
+
+#MFADE 20     //音楽のフェード停止
+
+bup9fadeout 8
+
+//背景
+back script/black.png
+backpos 320 556
+
+bup2fadechg 8//フェードイン
+buppos2 320 256
+bup2 script/player/1_2 //
+
+colfadechg 0 0 0 32
+timewait 20
+//=================================================
+
+#bgm 44
+
+buppos9 320 480
+bup9 script/player/chara2_0 //
+bup9fadechg 8//フェードイン
+name Sara 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+mes
+Whoa... That was close.
+Is everyone okay?
+
+sub_bupdel 15
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_0 //
+name Kratos 255
+mes
+Everyone appears to be fine.
+And look... the storm has passed.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_2 //
+name Colette 255
+#se 1
+bup15 script/eff/eff9.png
+buppos15 450 230
+action 1 15 8 16
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Whoa! It was totally pouring last
+night, too!
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+Do you think the timing of the
+collapse means... Chiyo finally
+got her wish?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_2 //
+name Tear 255
+mes
+Yes. I believe so.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup3fadechg 8//フェードイン
+bup3 script/player/chara1_0 //
+name Lippy 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 300
+action 1 15 8 16
+#voice 107 1
+mes
+What are you talking about?
+And Great Savior...
+What's that you're holding?
+
+sub_bupdel 15
+namedel
+bup3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+#se 1
+bup10fadechg 8//フェードイン
+buppos10 320 400
+bup10 script/player/chara695_4 //
+mes
+
+
+namedel
+bup10fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bup3fadechg 8//フェードイン
+bup3 script/player/chara1_0 //
+name Lippy 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 300
+action 1 15 8 16
+#voice 97 1
+mes
+Where did that envelope come
+from...?
+
+sub_bupdel 15
+namedel
+bup3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup9fadechg 8//フェードイン
+bup9 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+mes
+Oh, that's it!
+
+sub_bupdel 15
+
+bup9 script/player/chara2_1 //
+mes
+Chiyo...
+She finally gave it to you!
+
+namedel
+bup9fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+scroll 320 756 160 2
+timewait 200
+
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

@@ -1,0 +1,167 @@
+//===========================
+// ラビリンス
+//===========================
+
+// レイヤー構造
+// 1  予備
+// 15 感情eff1 Sara（！）
+// 14 メッセージ枠
+// 13 感情eff2 Sara（！）
+// 12 ローエン
+// 11 感情eff3 ミラ怒り
+// 10 ティボ
+// 9 感情eff4
+// 8 エリーゼ
+// 7 シング
+// 6 垣根
+// 5 ガルシア
+// 4 店員
+// 3 リッピ
+// 2 Sara
+// BG
+
+//===========================
+
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//♪♪♪ボイスパック指定♪♪♪
+#voicepack1 com_voice1
+#voicepack2 com_voice16_aekszsmr
+//ここまで基本定義
+//===========================
+
+//BGM
+#bgm 3
+
+//背景
+back script/bg/21
+backpos 320 556
+//座標ｘ、y
+
+//進行アイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+
+//文字色
+
+
+//メッセージ位置調整（セリフ用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+namepos 45 733
+fontpos 45 800
+
+//手前垣根
+bup13 script/event_frame01
+buppos8 320 480
+
+//==========================================
+fadechg 15  //FI
+timewait 10  //待機
+
+//==========================================
+//メッセージ枠（ちびキャラ5との座標関係に注意）
+
+bupeff14fadechg 8
+buppos14 0 0
+bupeffpos14 320 837
+bupeff14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bupeff2fadechg 8
+buppos2 0 0
+bupeffpos2 320 485
+bupeff2 script/player/chara2_1 //
+
+name Sara 255
+#voice 29 1
+mes
+All right!
+We made it to the 4th floor.
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+flush 255 255 255 9
+#se 6
+
+
+bupeff6fadechg 40 //フェードイン
+buppos6 0 0
+bupeffpos6 320 485
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+mes
+Well done. Now, to continue on,
+this is what you need to know!
+
+
+namedel
+bupeff6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+namedel
+bupeff14fadeout 8
+fadewait
+timewait 4
+
+
+#se 1
+//++++++++++++++++++++++++解説絵表示++++++++++++++++++++++++
+bupeff11fadechg 40 //フェードイン
+buppos11 0 0
+bupeffpos11 320 455
+bupeff11 script/player/ev0042_tut_04.png //
+
+mes
+
+//++++++++++++++++++++++++解説絵消去++++++++++++++++++++++++
+
+bupeff11fadeout 40
+fadewait
+timewait 40      //タイミング調整のため
+
+
+bupeff14fadechg 8
+bupeff14 script/tal_sto_base.png
+
+
+bupeff6fadechg 20 //フェードイン
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+mes
+I know that you can do this!
+Do your best! Do your worst!
+
+flush 255 255 255 9
+#se 6
+
+namedel
+bupeff6fadeout 40
+fadewait
+timewait 30      //タイミング調整のため
+
+
+
+bupdel
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

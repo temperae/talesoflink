@@ -1,0 +1,630 @@
+//イベントタイトル「部活」OP２−１
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 サラ
+// 3 
+// 4 Jude（chara116_1）
+// 5 電波（chara697_0）
+// 6 Lippy（chara696_0）
+// 7 アンテナ（chara697_1）
+// 8 
+// 9 タイトル画面
+// 10 
+// 11 つづく画面
+// 12 垣根
+// 13 
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//サラ＆Lippyのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+
+//BGM
+#bgm 56
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+//背景
+back script/bg/2
+backpos 320 556
+
+
+//タイミング調整
+//背景
+
+//座標ｘ、y
+
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+namepos 45 733
+fontpos 45 800
+
+
+name Lippy 255
+mes
+Well done, Great Savior!
+Please continue towards the hills!
+
+#voice 90 1
+mes
+Now, please bear with me a moment.
+I'm going to project my form to
+you.
+
+
+//================================================
+//黒フェードアウト
+#se 4
+colfadeout 255 255 255 32
+timewait 32
+
+bup5fadechg 8//フェードイン
+buppos5 320 250
+bup5 script/player/chara697_0 //
+
+bup6fadechg 8//フェードイン
+buppos6 320 250
+bup6 script/player/chara696_0 //
+
+//黒フェードイン
+colfadechg 255 255 255 32
+timewait 32
+
+//================================================
+
+name Lippy 255
+mes
+There. That should make it easier
+for us to talk!
+
+mes
+Yes, of course! I'm sure you're
+quite confused by what's happening!
+
+bup6 script/player/chara696_1 //
+#voice 72 1
+mes
+I haven't much time, so I will make
+my explanation as brief as
+possible.
+
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+mes
+I believe you've sensed a feeling
+of incongruity? That's because
+you're currently in a dream world.
+
+bup6 script/player/chara696_2 //
+mes
+You, Lady Sara, and the rest of our
+traveling companions made camp in
+some ruins last night, and remain
+asleep in the real world.
+
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+mes
+I suspect that all of you are
+currently sharing the same dream.
+
+namedel
+bup6fadeout 8
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup14 script/tal_sto_base_mind
+mes
+[Approaching footsteps]
+
+bup14 script/tal_sto_base
+
+bup4fadechg 8//フェードイン
+buppos4 1000 480
+bup4 script/player/chara116_4 //
+
+scroll 470 480 30 4
+timewait 20
+
+name Jude 255
+mes
+So that's what's going on...
+I knew this couldn't be real.
+
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+It's a good thing I followed you
+here, GET[username].
+
+buppos6 180 200
+bup6 script/player/chara696_1 //
+bup6fadechg 8//フェードイン
+
+bup7fadechg 8//アンテナフェードイン
+buppos7 300 60
+bup7 script/player/chara697_1 //
+
+name Lippy 255
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Master Jude!
+
+mes
+Have you regained consciousness
+as well?
+
+sub_bupdel 15
+bup7fadeout 8
+namedel
+
+name Jude 255
+mes
+Yeah. Things started to feel wrong.
+
+mes
+Like, if we're all students in the
+same school, why do we all have
+different uniforms?
+
+mes
+But it was GET[username] who
+really made me open my eyes.
+
+bup4 script/player/chara116_3 //
+name Jude 255
+mes
+Thanks, GET[username].
+
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+So how is it that you're here,
+Lippy? Are you asleep with us in
+the real world?
+
+namedel
+
+bup7fadechg 8//フェードイン
+bup6 script/player/chara696_0 //
+name Lippy 255
+mes
+No, I have already awakened.
+
+namedel
+
+
+name Lippy 255
+mes
+I'm using the full power of my
+smartphon to project my voice and
+appearance to you, using the Great
+Savior as my intermediary.
+
+namedel
+bup7fadeout 8
+
+name Jude 255
+mes
+Huh...
+
+bup4 script/player/chara116_4 //
+mes
+If you're going through that much
+trouble, I'm guessing you haven't
+been able to wake us in the real
+world.
+
+namedel
+
+bup7fadechg 8//フェードイン
+name Lippy 255
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+#voice 60 1
+mes
+Precisely, Master Jude!
+
+bup6 script/player/chara696_2 //
+mes
+I yelled, I shook you, I pinched
+your cheeks, but not a one of you
+has awakened.
+
+mes
+Suspecting that it must be some
+property of these ruins, I've been
+investigating the matter all
+morning.
+
+bup6 script/player/chara696_1 //
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+mes
+And the conclusion I've arrived at
+is a most disturbing one.
+
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+mes
+In ancient times, these ruins were
+a magical artes research institute
+that was experimenting with methods
+of allowing people to share dreams.
+
+namedel
+bup7fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+action 0 4 8 4
+timewait 8
+action 5 4
+timewait 2
+mes
+So you think we must have tripped
+some sort of magical device used
+in their research?
+
+namedel
+
+bup7fadechg 8//フェードイン
+bup6 script/player/chara696_2 //
+name Lippy 255
+#voice 71 1
+mes
+Yes, I believe so. Everyone was
+swept into the dream and
+effectively had their awareness
+of the outside world wiped away.
+
+bup7fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 580 200
+action 1 15 8 16
+mes
+But why didn't it affect you,
+Lippy?
+You were sleeping right there
+with us!
+
+sub_bupdel 15
+namedel
+
+bup7fadechg 8//フェードイン
+name Lippy 255
+#voice 94 1
+mes
+That is indeed a mystery.
+
+mes
+My hypothesis is that the setting
+of the dream is simply one in which
+I would be out of place.
+
+namedel
+bup7fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 580 200
+action 1 15 8 16
+mes
+The setting of the dream?
+
+sub_bupdel 15
+namedel
+
+bup7fadechg 8//フェードイン
+name Lippy 255
+mes
+Yes. The device that I was
+examining seemed to have already
+been loaded up with someone else's
+dream.
+
+
+namedel
+bup7fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+So this dream isn't one of ours?
+It belonged to someone from
+antiquity?
+
+namedel
+
+bup7fadechg 8//フェードイン
+bup6 script/player/chara696_0 //
+name Lippy 255
+mes
+That is my working theory, yes.
+
+namedel
+bup7fadeout 8
+
+bup4 script/player/chara116_4 //
+name Jude 255
+#se 1
+bup15 script/eff/eff6.png
+buppos15 580 200
+action 1 15 8 16
+mes
+Wow... A dream of someone from
+ancient history...
+
+sub_bupdel 15
+
+
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+So, Lippy, have you figured out how
+to wake us from this dream?
+
+namedel
+
+bup7fadechg 8//フェードイン
+name Lippy 255
+action 1 3 6 4
+timewait 8
+action 5 3
+timewait 2
+mes
+According to my analysis, the
+device is configured to awaken you
+when some powerful desire of the
+original dreamer is achieved.
+
+mes
+Therefore, you're likely to awaken
+if you can bring about that
+outcome.
+
+namedel
+
+bup6 script/player/chara696_3 //
+name Lippy 255
+action 0 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+However, it is imperative that
+you... [garbled] utmost haste...
+[garbled] serious problem...
+[garbled]
+
+namedel
+bup7fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 580 200
+action 1 15 8 16
+mes
+Lippy?!
+
+
+sub_bupdel 15
+namedel
+
+bup7fadechg 8//フェードイン
+bup6 script/player/chara696_4 //
+name Lippy 255
+action 0 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Sorry... [garbled] smartphon...
+[garbled] of energy...
+
+action 0 6 6 4
+timewait 8
+mes
+...
+
+
+namedel
+
+//================================================
+//黒フェードアウト
+
+#se 4
+colfadeout 255 255 255 32
+timewait 32
+
+#MFADE 20     //音楽のフェード停止
+
+action 5 6
+
+bup6fadeout 8
+bup7fadeout 8
+bup4fadeout 8
+
+//黒フェードイン
+colfadechg 255 255 255 32
+timewait 32
+
+//================================================
+
+
+buppos4 320 480
+bup4 script/player/chara116_6 //
+bup4fadechg 8//フェードイン
+name Jude 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 200
+action 1 15 8 16
+mes
+Lippy's disappeared! His smartphon
+must have run out of magical
+energy...
+
+sub_bupdel 15
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_4 //
+name Jude 255
+mes
+He was saying something about a
+serious problem, too... Maybe there
+was some trouble going on in the
+real world?
+
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#bgm 7
+
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_2 //
+name Jude 255
+mes
+We need to wake up from this dream
+as quickly as we can!
+
+bup4 script/player/chara116_1 //
+mes
+If what Lippy said was right,
+we don't have much of a choice...
+
+mes
+We've got to return to that
+classroom, play our parts in the
+dream, and fulfill whatever
+condition we need to achieve.
+
+mes
+I think our best strategy is to try
+to snap the others out of the dream
+so that we can all work together.
+
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 200
+action 1 15 8 16
+mes
+Hmmm?
+How do we do that? Well...
+
+sub_bupdel 15
+
+bup4 script/player/chara116_3 //
+name Jude 255
+action 1 4 6 4
+timewait 8
+action 5 4
+timewait 2
+mes
+What worked for me was when I felt
+something was out of place in the
+situation of the dream. We need to
+make the others see those
+incongruities!
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

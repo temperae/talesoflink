@@ -1,0 +1,761 @@
+//イベントタイトル「部活」OP１−２
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 Sara
+// 3 Lippy
+// 4 Jude（chara116_1）
+// 5 Tear（chara118_1）
+// 6 Colette（chara114_1）
+// 7 Kratos（chara694_0）
+// 8 ちよちゃん
+// 9 タイトル画面
+// 10 
+// 11 つづく画面
+// 12 垣根
+// 13 
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆Lippyのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+
+//BGM
+#bgm 55
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+//背景
+back script/bg/51
+backpos 320 556
+
+
+//タイミング調整
+//背景
+
+//座標ｘ、y
+
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+namepos 45 733
+fontpos 45 800
+
+
+bup2fadechg 8//フェードイン
+buppos2 1500 490
+bup2 script/player/chara2_0 //
+
+scroll 320 490 30 2
+timewait 20
+
+name Sara 255
+mes
+*Pant* *pant*
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+#se 1
+buppos15 450 260
+bup15 script/eff/eff7.png
+action 1 15 8 16
+#voice 27 1
+mes
+We made it! If only barely...
+I was so afraid we'd be late...
+
+sub_bupdel 15
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+It's a good thing I was able to get
+you and Chiyo moving,
+GET[username]!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+buppos8 320 480
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+mes
+...
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+name ？？？ 255
+mes
+You arrived as the bell was
+ringing.
+That counts as tardy.
+
+
+namedel
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Oh come on, Tear! Cut us a break!
+You don't need to be so strict
+just cuz you're the class
+president.
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+buppos5 320 480
+bup5 script/player/chara118_1 //
+name Tear 255
+mes
+My strictness is not the issue
+here. You're to be in your seat
+before the bell rings. It's clearly
+spelled out in the school policy
+handbook.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 450 260
+action 1 15 8 16
+#voice 50 1
+mes
+It is...?
+Heh... heh.
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+buppos4 320 480
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+Can't you give 'em a pass, 
+Ms. President?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+buppos6 320 480
+bup6 script/player/chara114_2 //
+name Colette 255
+mes
+Yeah! Today's supposed to be
+the big day, remember?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+mes
+Jude! Colette! Thanks, guys.
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_6 //
+name Tear 255
+mes
+Why must you two always argue for
+leniency?
+
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_1 //
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 200
+action 1 15 8 16
+mes
+Huh? GET[username]...?
+Why are you staring at me like
+that?
+
+sub_bupdel 15
+
+mes
+What? Yes, of course I'm the class
+president! Were you not aware...?
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+mes
+Why aren't I studying medicine...?
+Huh? This is high school,
+GET[username].
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_5 //
+name Colette 255
+mes
+You thought I was a Chosen on some
+sort of pilgrimage...? What...?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 420 260
+action 1 15 8 16
+#voice 45 1
+mes
+GET[username]!
+What is wrong with you?
+You're saying such bizarre things!
+
+bup2 script/player/chara2_1 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Heh heh! Forgive him, guys.
+GET[username]'s still half
+asleep!
+
+sub_bupdel 15
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+I cannot believe you,
+GET[username]!
+You're acting like a crazy person,
+and after Jude and Colette went to
+bat for us!
+
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+The whole class needs to be unified
+today! You are not helping!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 200
+action 1 15 8 16
+mes
+Huh...?
+
+sub_bupdel 15
+mes
+Hey, Sara... 
+What GET[username] said
+just know...
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#se 73
+bup14 script/tal_sto_base_mind
+mes
+Slam!
+
+bup14 script/tal_sto_base
+
+name ？？？？ 255
+mes
+What's going on here?
+Did you not hear the bell ring?
+
+namedel
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 420 260
+action 1 15 8 16
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 48 1
+mes
+M-Mr. Aurion!
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_0 //
+name Kratos 255
+mes
+Sara, Chiyo, GET[username]—
+sit down at your desks!
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Y-Yessir!
+Come on guys! You heard him!
+
+namedel
+scroll -500 490 30 2
+timewait 20
+
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+mes
+...
+
+namedel
+scroll -500 480 30 8
+timewait 20
+
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_0 //
+name Kratos 255
+mes
+Now, let's begin today's lesson.
+
+mes
+As you're aware, today is a very
+special day.
+
+mes
+It's the school's annual Sports
+Day, in which the classes compete
+against each other in tests of
+physical prowess.
+
+mes
+You all seem sufficiently
+enthusiastic.
+
+mes
+Do take care not to overdo it and
+hurt yourself out there.
+
+mes
+Now, I'll go over the rules and
+policies for the event...
+
+namedel
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 32
+
+#MFADE 20     //音楽のフェード停止
+
+bup7fadeout 8
+
+//背景
+back script/black.png
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+
+//=================================================
+
+
+name ？？？ 255
+mes
+...ior!
+
+mes
+Great Savior!
+Can you hear me?
+
+name Lippy 255
+#voice 79 1
+mes
+Great Savior! It's me, Lippy!
+Please, you have to listen to this!
+
+#voice 67 1
+mes
+Ah! It appears you can hear me at
+last! Thank the Heavens I was able
+to break through!
+
+mes
+I have something important to tell
+you. Are you able to get away from
+where you are right now?
+
+namedel
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+//背景
+back script/bg/51
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+//=================================================
+
+#bgm 55
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_0 //
+name Kratos 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 130
+action 1 15 8 16
+mes
+Huh? GET[username]!
+Sit down and listen to me!
+
+sub_bupdel 15
+
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 130
+action 1 15 8 16
+action 1 7 6 4
+timewait 8
+action 5 7
+timewait 2
+mes
+What are you doing?
+Where do you think you're going?
+
+sub_bupdel 15
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#se 73
+timewait 20
+
+buppos2 320 490
+bup2 script/player/chara2_0 //
+bup2fadechg 8//フェードイン
+name Sara 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 450 260
+action 1 15 8 16
+mes
+He just left...?!
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos8 320 480
+bup8 script/player/chara695_2 //
+bup8fadechg 8//フェードイン
+name Chiyo 255
+mes
+...
+
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_1 //
+name Colette 255
+mes
+Maybe he really needed to use the
+bathroom...?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_4 //
+name Jude 255
+mes
+He's been acting weird all day...
+I wonder if something's up.
+
+mes
+Wait a minute...
+Is something up...?
+
+bup4 script/player/chara116_5 //
+#se 1
+bup15 script/eff/eff6.png
+buppos15 450 200
+action 1 15 8 16
+mes
+...
+
+sub_bupdel 15
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_6 //
+name Jude 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 200
+action 1 15 8 16
+action 0 4 8 4
+timewait 8
+action 5 4
+timewait 2
+mes
+I mean...
+Look at our uniforms...?
+
+sub_bupdel 15
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+mes
+Um, Mr. Aurion?
+Can I go to the bathroom too?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_0 //
+name Kratos 255
+mes
+You too, Jude?
+
+mes
+Fine, go. And make sure
+GET[username] is okay
+while you're there.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_1 //
+name Jude 255
+action 1 4 6 4
+timewait 8
+action 5 4
+timewait 2
+mes
+Thank you, sir.
+I'll be right back.
+
+namedel
+scroll 1500 480 30 4
+timewait 20
+
+
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#se 73
+timewait 20
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff6.png
+buppos15 450 260
+action 1 15 8 16
+mes
+...
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_2 //
+name Sara 255
+mes
+Sports Day is about to begin and
+everyone's acting weird! Uggghh...
+It's making me feel all queasy...
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

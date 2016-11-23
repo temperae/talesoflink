@@ -1,0 +1,838 @@
+//イベントタイトル「部活」本編２−２
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 Sara
+// 3 リッピ
+// 4 Jude（chara116_100）
+// 5 Tear（chara118_100）
+// 6 Colette（chara114_101）
+// 7 Kratos（chara694_100）
+// 8 Chiyoちゃん
+// 9 
+// 10 
+// 11 
+// 12 垣根
+// 13 エフェクト（反転）
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆リッピのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+bupLR13 1
+
+//BGM
+#bgm 3
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+
+//背景
+back script/bg/50
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+//++++++++++++++++++++++++ナレ消去++++++++++++++++++++++++
+
+namepos 45 733
+fontpos 45 800
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+From the appearances of the other
+competitors, I'm guessing this is
+my turn.
+
+mes
+I've never used a bow before, but I
+imagine I can handle this. Hitting
+the target is all that matters,
+right?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+buppos6 320 480
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+buppos15 500 260
+bup15 script/eff/eff9.png
+action 1 15 8 16
+mes
+I love that confidence!
+Sounds like you've got this,
+Kratos!
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+Why couldn't I have gotten to do
+the archery competition?
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Perhaps I should practice a bit
+before my turn comes up.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+buppos2 320 490
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+#voice 7 1
+mes
+Mr. Aurion? What are you doing?
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+What do you mean? 
+I'm practicing for the competition.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 450 260
+action 1 15 8 16
+#voice 26 1
+mes
+You can't be serious!
+You're a teacher!
+
+sub_bupdel 15
+
+bup2 script/player/chara2_0 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Did you honestly intend to compete
+against students? That would be so
+unfair!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 150
+action 1 15 8 16
+action 0 7 8 4
+timewait 8
+action 5 7
+timewait 2
+mes
+Oh...
+
+sub_bupdel 15
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+buppos4 320 480
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Hmm... That actually does make
+sense. A teacher competing wouldn't
+really fit with what we've seen so
+far.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+action 0 7 8 4
+timewait 8
+action 5 7
+timewait 2
+mes
+Then why am I dressed like this?
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#voice 40 1
+mes
+Uh... because you're the archery
+club's faculty advisor...?
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 150
+action 1 15 8 16
+mes
+Well.
+That is certainly news to me!
+
+sub_bupdel 15
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 430 230
+action 1 15 8 16
+mes
+I guess we're missing a lot of the
+backstory to this dream...
+
+sub_bupdel 15
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+Sara, who is participating in this
+event? GET[username] is
+hardly dressed for it...
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 25 1
+mes
+It's Chiyo, of course!
+
+bup2 script/player/chara2_0 //
+name Sara 255
+mes
+Look, she's practicing over there.
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+buppos8 320 480
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 22
+timewait 20
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+action 0 8 8 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Well this is different.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+I'm afraid she doesn't seem to be
+much of an archer, though.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Indeed. Look at her target. 
+She's missed ten out of ten shots.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+But she really seems to be trying
+hard!
+
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Shouldn't we go cheer her on?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+That's a good idea. What was it
+Sara said earlier? "Class unity
+and hard work is what Sports Day
+is all about"?
+
+mes
+Maybe that's the key to waking from
+this dream—actually winning the
+event has nothing to do with it.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+Then we need to go root for her!
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Okay gang, on the count of
+three...!
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 52 1
+mes
+Wait, no, stop! We have to be quiet
+at the archery range. It's supposed
+to be a somber place!
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+mes
+Oh... Then...
+we cheer quietly?
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+I said somber, guys!
+No cheering!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 500 260
+action 1 15 8 16
+mes
+Then now what?
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+So that's what this is about.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 430 230
+action 1 15 8 16
+mes
+Huh? What do you mean?
+
+sub_bupdel 15
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Now I understand my role in
+this.
+
+namedel
+
+scroll -500 480 30 7
+timewait 20
+
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+timewait 40
+
+buppos8 140 480
+bup8 script/player/chara695_2 //
+bup8fadechg 8//フェードイン
+
+buppos7 1500 480
+bup7 script/player/chara694_100 //
+bup7fadechg 8//フェードイン
+
+scroll 470 480 30 7
+timewait 20
+
+name Kratos 255
+mes
+Chiyo, can I have a word?
+
+namedel
+
+#se 1
+buppos13 50 260
+bup13 script/eff/eff1.png
+action 1 13 8 16
+name Chiyo 255
+mes
+...!
+
+sub_bupdel 13
+namedel
+
+name Kratos 255
+mes
+You don't pull a bowstring
+with your arms, but instead
+with your mind and your breath.
+
+namedel
+
+#se 1
+bup13 script/eff/eff7.png
+buppos13 50 260
+action 1 13 8 16
+
+scroll 380 480 30 7
+timewait 10
+
+
+name Kratos 255
+mes
+No. I'm not telling you to go
+slack. You need to correct your
+stance, and then correct your
+concentration.
+
+sub_bupdel 13
+namedel
+bup8fadeout 8
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 170
+action 1 15 8 16
+mes
+What is Kratos doing?
+I'm not sure if this is a good
+idea.
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Maybe we should stop him.
+If he upsets her, we could be—
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+#MFADE 20     //音楽のフェード停止
+
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+#voice 20 1
+mes
+Hold it right there, you two.
+
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos5 100 480
+bup5 script/player/chara118_100 //
+bup5fadechg 8//フェードイン
+
+buppos4 500 480
+bup4 script/player/chara116_100 //
+bup4fadechg 8//フェードイン
+
+#se 1
+bup13 script/eff/eff1.png
+buppos13 30 230
+action 1 13 8 16
+
+#se 1
+bup15 script/eff/eff1.png
+buppos15 600 260
+action 1 15 8 16
+
+
+name Tear　/　Jude 255
+mes
+Huh?!
+
+sub_bupdel 13
+sub_bupdel 15
+
+namedel
+bup5fadeout 8
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+#bgm 10
+
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+mes
+Chiyo may be a lousy archer, but
+she's been practicing hard for
+this day.
+
+mes
+And she's not the type to flip out
+over a little tough love from
+Mr. Aurion.
+
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+After all, Chiyo is the one who's
+determined to make this her big
+day.
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos4 320 480
+bup4 script/player/chara116_100 //
+bup4fadechg 8//フェードイン
+name Jude 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 430 230
+action 1 15 8 16
+mes
+Hmmm...?
+
+namedel
+
+//================================================
+//黒フェードアウト
+colfadeout 0 0 0 32
+timewait 32
+
+sub_bupdel 15
+bup4fadeout 8
+
+//黒フェードイン
+colfadechg 0 0 0 32
+timewait 32
+
+//================================================
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 500 260
+action 1 15 8 16
+mes
+It looks like practice time's over.
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos7 -500 480
+bup7 script/player/chara694_100 //
+bup7fadechg 8//フェードイン
+
+scroll 320 480 30 7
+timewait 20
+
+name Kratos 255
+mes
+Well, she's no marksman, but that
+should make her a little better.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos5 320 480
+bup5 script/player/chara118_100 //
+bup5fadechg 8//フェードイン
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 170
+action 1 15 8 16
+mes
+Kratos, what did you just do?
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Don't worry. That's how a teacher
+expresses class unity.
+
+mes
+Take a look. I bet she lands at least
+one shot.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

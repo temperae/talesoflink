@@ -1,0 +1,462 @@
+//イベントタイトル「部活」OP１−１
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 Sara
+// 3 リッピ
+// 4 ジュード（chara116_1）
+// 5 ティア（chara118_1）
+// 6 コレット（chara114_1）
+// 7 クラトス（chara694_0）
+// 8 ちよちゃん
+// 9 タイトル画面
+// 10 流れ星
+// 11 つづく画面
+// 12 垣根
+// 13 流れ星
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆リッピのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+namepos 45 733
+fontpos 45 800
+
+
+name ？？？ 255
+mes
+—
+
+
+mes
+Get up!
+
+mes
+Come on, GET[username], 
+wake up!
+We're gonna be late!
+
+namedel
+
+//===========黒フェードアウト後背景変更============
+colfadeout 0 0 0 32
+timewait 48
+
+
+//背景
+back script/bg/86
+backpos 320 556
+
+colfadechg 255 255 255 120
+timewait 20
+//===========================================
+
+#se 79
+bup2fadechg 8//フェードイン
+buppos2 320 490
+bup2 script/player/chara2_1 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Finally! Come on, you gotta get
+ready for school!
+
+bup2 script/player/chara2_0 //
+#se 1
+buppos15 450 260
+bup15 script/eff/eff2.png
+action 1 15 8 16
+#voice 7 1
+mes
+What's with the blank look on your
+face? You seem so confused...
+
+#voice 9 1
+mes
+Huh? What's a Lippy?
+What are you talking about?
+
+sub_bupdel 15
+
+bup2 script/player/chara2_1 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 25 1
+mes
+Get it together, GET[username]!
+We have to hurry! Come on! Now!
+
+namedel
+
+//タイトル挟むよ
+//++++++++++++++++++++++++ナレ開始++++++++++++++++++++++++
+//黒フェードアウト
+colfadeout 0 0 0 32
+timewait 20
+
+//BGM
+#bgm 55
+
+bup2fadeout 8
+bup14fadeout 8
+
+back script/black.png
+backpos 320 600
+
+//黒フェードイン
+colfadechg 0 0 0 32
+timewait 20
+
+fontpos 45 450
+
+//========================
+
+//タイトル表示
+
+#se 4
+bup10fadechg 8//フェードイン
+buppos10 320 520
+bup10 script/player/chara697_0 //
+action 1 10 6 4
+timewait 8
+
+
+timewait 30
+bup10fadeout 30
+action 5 10
+
+bup9fadechg 30//フェードイン
+buppos9 320 520
+bup9 script/player/chara695_0 //
+
+timewait 20
+
+
+mes
+
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+bup9fadeout 8
+bup10fadeout 8
+
+//背景
+back script/bg/89
+backpos 320 556
+
+namepos 45 733
+fontpos 45 800
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+colfadechg 0 0 0 32
+timewait 20
+//++++++++++++++++++++++++ナレ消去++++++++++++++++++++++++
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+mes
+Why are you gaping at everything
+like you've never been here before?
+This is the route we take to school
+every day!
+
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+#voice 8 1
+mes
+What? The last thing you remember
+was taking shelter from the rain
+in some ancient ruins? And we were
+traveling with a bunch of other
+people?
+
+sub_bupdel 15
+
+bup2 script/player/chara2_1 //
+#se 1
+bup15 script/eff/eff4.png
+buppos15 450 260
+action 1 15 8 16
+action 0 2 8 4
+timewait 8
+action 5 2
+timewait 2
+mes
+You have the weirdest dreams,
+GET[username]. Maybe that's why
+you're always so disoriented in
+the mornings?
+
+sub_bupdel 15
+
+bup2 script/player/chara2_0 //
+mes
+But seriously, you gotta do
+something about that. It's absurd
+that you need me to come from next
+door to wake you every day.
+
+mes
+And today's gonna be such a big
+day... I really wanted you to be
+ready for this!
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 48 1
+mes
+Bwah! Look out!
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+buppos8 -1000 480
+bup8 script/player/chara695_2 //
+
+scroll 320 480 20 8
+timewait 30
+
+name ？？ 255
+action 0 8 8 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...?
+
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#voice 5 1
+mes
+Chiyo! You nearly ran right into
+GET[username]!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+action 1 8 6 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...!
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+mes
+What's with the piece of bread
+in your mouth...? Wait a minute...
+
+sub_bupdel 15
+bup2 script/player/chara2_1 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 26 1
+mes
+Chiyo, did you oversleep too?
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 450 260
+action 1 15 8 16
+mes
+...
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+action 0 2 8 4
+timewait 8
+action 5 2
+timewait 2
+#voice 25 1
+mes
+Don't you smile at me!
+I can see right through you!
+
+mes
+I can't believe neither of my
+childhood besties can manage to
+wake up in time for school!
+You don't know how hard it is to
+be the responsible one!
+
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+Argghhh!
+I can hear the first bell!
+
+sub_bupdel 15
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 0 1
+mes
+Chiyo, GET[username]—
+get it in gear!
+At this rate we're all gonna
+be tardy!
+
+namedel
+bup2fadeout 8
+timewait 4      //タイミング調整のため
+bup14fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+//++++++++++++++++++++++++解説絵表示++++++++++++++++++++++++
+#se 1
+bup11fadechg 8 //フェードイン
+buppos11 320 500
+bup11 script/player/ev0075_tut_01 //
+mes
+
+
+//+++++++++++++++++++++++解説絵消去++++++++++++++++++++++++
+
+bup11fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

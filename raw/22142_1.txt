@@ -1,0 +1,364 @@
+//===========================
+// ラビリンス
+//===========================
+
+// レイヤー構造
+// 1  予備
+// 15 感情eff1 Sara（！）
+// 14 メッセージ枠
+// 13 感情eff2 Sara（！）
+// 12 ローエン
+// 11 感情eff3 ミラ怒り
+// 10 ティボ
+// 9 感情eff4
+// 8 エリーゼ
+// 7 シング
+// 6 垣根
+// 5 ガルシア
+// 4 店員
+// 3 Lippy
+// 2 Sara
+// BG
+
+//===========================
+
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//♪♪♪ボイスパック指定♪♪♪
+#voicepack1 com_voice1
+#voicepack2 com_voice16_aekszsmr
+//ここまで基本定義
+//===========================
+
+//BGM
+#bgm 3
+
+//背景
+back script/bg/21
+backpos 320 556
+//座標ｘ、y
+
+//進行アイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+
+//文字色
+
+
+//メッセージ位置調整（セリフ用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+namepos 45 733
+fontpos 45 800
+
+//手前垣根
+bup13 script/event_frame01
+buppos6 320 480
+
+//==========================================
+fadechg 15  //FI
+timewait 10  //待機
+
+//==========================================
+//メッセージ枠（ちびキャラ5との座標関係に注意）
+
+bupeff14fadechg 8
+buppos14 0 0
+bupeffpos14 320 837
+bupeff14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bupeff2fadechg 8
+buppos2 0 0
+bupeffpos2 320 485
+bupeff2 script/player/chara2_0 //
+
+name Sara 255
+#voice 16 1
+mes
+Wait a minute...
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupeff3fadechg 8
+buppos3 0 0
+bupeffpos3 320 485
+bupeff3 script/player/chara1_0 //
+
+name Lippy 255
+mes
+Might this be that labyrinth again?
+
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+flush 255 255 255 9
+#se 6
+
+
+
+name ？？？ 255
+mes
+You've returned!
+Welcome!
+
+namedel
+
+
+bupeff2fadechg 8 //フェードイン
+bupeff2 script/player/chara2_0 //
+
+#se 34
+bupeffpos7 420 260
+bupeff7 script/eff/eff1.png
+action 1 7 8 16
+timewait 10
+action 5 7
+
+name Sara 255
+mes
+I knew it!
+It's Kurin's labyrinth!
+
+sub_bupdel 22
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupeff6fadechg 8 //フェードイン
+buppos6 0 0
+bupeffpos6 320 485
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+
+mes
+Welcome to the ruins
+of the Chrono Labyrinth!
+
+mes
+My name is—
+You can call me—
+I am—
+
+mes
+Kurin.
+
+namedel
+bupeff6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bupeff3fadechg 8 //フェードイン
+bupeff3 script/player/chara1_0 //
+
+//リサヲラの台詞
+//-------------------------------
+name Lippy 255
+#voice 97 1
+mes
+It is a pleasure to see you again,
+Master Kurin. But... has something
+happened?
+The labyrinth feels different.
+
+//リサヲラバストアップ削除
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bupeff6fadechg 8 //フェードイン
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+mes
+Every day, every time,
+the world changes.
+
+mes
+Every day, every time, the maze
+changes.
+Every day, every time, I change.
+It is our nature.
+
+
+namedel
+bupeff6fadeout 40
+fadewait
+timewait 30      //タイミング調整のため
+
+bupeff3fadechg 8 //フェードイン
+bupeff3 script/player/chara1_0 //
+
+action 0 2 5 2
+timewait 8
+action 5 2
+timewait 2
+
+name Lippy 255
+mes
+You may say that you've changed,
+but you're as perplexing as ever!
+
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bupeff6fadechg 8 //フェードイン
+bupeff6 script/player/chara148_0 //
+
+name Kurin 255
+mes
+Thank you for visiting me again!
+Will you play with me?
+Won't you play with me?
+Shall we play?
+
+mes
+The rules have not changed!
+And neither have my words!
+Forgive me...
+
+mes
+The form of the labyrinth changes
+as you advance! Should you escape,
+you'll find treasure waiting!
+
+mes
+Only one path leads to the
+treasure!
+Only one path is correct!
+
+mes
+Only those with strength and wits,
+wits and strength, will manage to
+claim the treasure.
+
+mes
+Speed! How quickly can you escape?
+That is the way to earn treasure.
+
+mes
+Would you care to try it?
+That is, as ever...
+
+mes
+...my challenge to you!
+
+flush 255 255 255 9
+#se 6
+
+namedel
+bupeff6fadeout 40
+fadewait
+timewait 30      //タイミング調整のため
+
+
+bupeff3fadechg 8 //フェードイン
+bupeff3 script/player/chara1_0 //
+
+action 0 2 5 2
+timewait 8
+action 5 2
+timewait 2
+
+name Lippy 255
+mes
+And he's vanished.
+
+namedel
+bupeff3fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bupeff2fadechg 8 //フェードイン
+bupeff2 script/player/chara2_0 //
+
+name Sara 255
+mes
+So it's the same as last time...
+We race to the end of the labyrinth
+and claim the loot!
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+namedel
+bupeff14fadeout 8
+fadewait
+timewait 20
+
+
+#se 1
+//++++++++++++++++++++++++解説絵表示++++++++++++++++++++++++
+bupeff11fadechg 40 //フェードイン
+buppos11 0 0
+bupeffpos11 320 455
+bupeff11 script/player/ev0041_tut_01.png //
+
+mes
+
+//++++++++++++++++++++++++解説絵消去++++++++++++++++++++++++
+
+bupeff11fadeout 40
+fadewait
+timewait 20      //タイミング調整のため
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+bupeff14fadechg 8
+buppos14 0 0
+bupeffpos14 320 837
+bupeff14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bupeff2fadechg 8 //フェードイン
+bupeff2 script/player/chara2_0 //
+name Sara 255
+mes
+All right, Kurin, we're in!
+Let's get started,
+GET[username]!
+
+namedel
+bupeff2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+namedel
+bupeff14fadeout 8
+fadewait
+timewait 20
+
+bupdel
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE

@@ -1,0 +1,717 @@
+//イベントタイトル「部活」本編１−２
+
+
+//===========================
+
+// レイヤー構造
+// 1 予備
+// 2 Sara
+// 3 リッピ
+// 4 Jude（chara116_100）
+// 5 Tear（chara118_100）
+// 6 Colette（chara114_101）
+// 7 Kratos（chara694_100）
+// 8 ちよちゃん
+// 9 
+// 10 
+// 11 水中
+// 12 垣根
+// 13 水中
+// 14 メッセージ枠
+// 15 エフェクト「！」
+
+// BG
+
+//===========================
+
+//===========================
+//ここから基本定義
+//黒背景
+back script/black.png
+backpos 320 600
+
+//ウェイトアイコン
+wicon script/tal_sto_next.png
+wiconpos 600 900
+
+//Sara＆リッピのボイスパック指定
+#voicepack1 com_voice1
+#voicepack2 com_voice22_erizesutanrion
+
+//ここまで基本定義
+//===========================
+bup12 script/event_frame01
+buppos12 320 480
+
+
+//反転
+bupLR2 0
+bupLR4 0
+bupLR6 0
+
+//BGM
+#bgm 3
+
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+fontpos 45 450
+//メッセージ位置調整（ナレーション用）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+//================================================
+//黒フェードアウト
+colfadeout 0 0 0 32
+timewait 32
+
+//背景
+back script/bg/91
+backpos 320 556
+
+colfadechg 0 0 0 32
+timewait 20
+//++++++++++++++++++++++++ナレ消去++++++++++++++++++++++++
+
+namepos 45 733
+fontpos 45 800
+//メッセージ枠
+bup14fadechg 8
+buppos14 320 837
+bup14 script/tal_sto_base.png
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+buppos5 320 480
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+buppos15 500 170
+bup15 script/eff/eff2.png
+action 1 15 8 16
+mes
+What is this?!
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+buppos4 320 480
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+I guess this is... a pool?
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+buppos6 320 480
+bup6 script/player/chara114_101 //
+name Colette 255
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Looks like it's your turn,
+Tear!
+
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 500 170
+action 1 15 8 16
+action 1 5 6 4
+timewait 8
+action 5 5
+timewait 2
+mes
+M-Me...?
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+buppos7 320 480
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+That seems pretty clear.
+
+mes
+It appears everyone starts
+together, and then competes
+for rank.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+buppos2 320 490
+bup2 script/player/chara2_1 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 4 1
+mes
+You gotta take first place for us,
+Tear!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Indeed.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Don't worry, Tear!
+I believe in you!
+
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+action 1 4 6 4
+timewait 8
+action 5 4
+timewait 2
+mes
+You gotta swim like crazy, Tear.
+That's the only way we're getting
+out of this dream.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+mes
+I guess that explains why I'm
+dressed this way.
+Why me of all people?
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Complain later. Swim now.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 500 170
+action 1 15 8 16
+mes
+This dream is a nightmare.
+
+sub_bupdel 15
+namedel
+
+
+//================================================
+//黒フェードアウト
+colfadeout 0 0 0 32
+timewait 32
+
+#MFADE 20     //音楽のフェード停止
+
+bup5fadeout 8
+
+//黒フェードイン
+colfadechg 0 0 0 32
+timewait 32
+
+//================================================
+
+name Judge 255
+mes
+Okay swimmers, on your marks...
+Get ready...
+
+namedel
+
+
+bup14 script/tal_sto_base_mind
+#se 78
+mes
+[Bang!]
+
+bup14 script/tal_sto_base
+
+
+#bgm 7
+
+timewait 20
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_3 //
+name Sara 255
+#se 1
+bup15 script/eff/eff1.png
+buppos15 450 260
+action 1 15 8 16
+#voice 48 1
+mes
+Oh no! Tear got a late start!
+
+sub_bupdel 15
+
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+mes
+But... There's still time to turn
+it around. Go, Tear, go!
+
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 28 1
+mes
+Come on everyone, cheer her on!
+We gotta dig deep here! You can
+do it, Tear! Go go go go go go!
+
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+name Sara 255
+mes
+Everyone needs to cheer!
+Right, Chiyo?
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+buppos8 320 480
+bup8 script/player/chara695_2 //
+name Chiyo 255
+action 1 8 6 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...
+
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 430 230
+action 1 15 8 16
+mes
+Ah... heh....
+Then I suppose we need to do this.
+
+sub_bupdel 15
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup7fadechg 8//フェードイン
+bup7 script/player/chara694_100 //
+name Kratos 255
+mes
+Yes. It would be best to obey Sara.
+
+namedel
+bup7fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Right...
+And we need to keep Chiyo happy,
+too.
+We can't risk souring her mood.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+bup15 script/eff/eff3.png
+buppos15 500 260
+action 1 15 8 16
+action 1 6 6 4
+timewait 8
+action 5 6
+timewait 2
+mes
+Okay!
+Let's cheer our hearts out!
+
+sub_bupdel 15
+namedel
+
+
+//黒フェードアウト後背景変更=======================
+colfadeout 0 0 0 32
+timewait 48
+
+bup6fadeout 8
+
+bup11fadechg 8//フェードイン
+buppos11 320 400
+bup11 script/player/chara638_0 //
+
+colfadechg 0 0 0 32
+timewait 20
+//=================================================
+
+name Tear 255
+mes
+(Damn it! I can't catch the leader!
+How can she be so fast?!)
+
+namedel
+
+name Jude 255
+mes
+Last stretch, Tear!
+Finish strong!
+
+namedel
+
+name Colette 255
+mes
+You can do it, Tear!
+
+namedel
+
+name Tear 255
+mes
+(Right... If I don't win this,
+I could be stuck in this dream
+forever. I can't let that happen!)
+
+namedel
+
+bup13fadechg 60//フェードイン
+buppos13 320 400
+bup13 script/player/chara638_1 //
+#se 15
+action 1 13 30 4
+timewait 16
+action 5 13
+timewait 2
+
+
+name Sara 255
+mes
+Look at that!
+Tear got a sudden burst of speed!
+
+mes
+If she can keep this up...
+
+namedel
+
+//黒フェードアウト後背景変更=======================
+colfadeout 255 255 255 32
+timewait 48
+
+bup11fadeout 8
+bup13fadeout 8
+
+#MFADE 20     //音楽のフェード停止
+
+//背景
+back script/bg/91
+backpos 320 556
+
+colfadechg 255 255 255 40
+timewait 40
+//=================================================
+
+#bgm 14
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 27 1
+mes
+Tear did it! She did it!
+First place with time to spare!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff3.png
+buppos15 450 260
+action 1 15 8 16
+action 1 8 6 4
+timewait 8
+action 5 8
+timewait 2
+mes
+...
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup4fadechg 8//フェードイン
+bup4 script/player/chara116_100 //
+name Jude 255
+mes
+Look, Chiyo's smiling.
+I think we're doing it.
+
+namedel
+bup4fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+buppos5 -500 480
+bup5 script/player/chara118_100 //
+bup5fadechg 8//フェードイン
+
+scroll 320 480 30 5
+timewait 20
+
+name Tear 255
+mes
+Yeah, easy for you all to
+celebrate... You're not the ones
+who have to deal with this.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_0 //
+name Sara 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+#voice 9 1
+mes
+What are you so upset about, Tear?
+You totally won that race!
+
+sub_bupdel 15
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+#se 1
+bup15 script/eff/eff2.png
+buppos15 450 260
+action 1 15 8 16
+mes
+...
+
+
+sub_bupdel 15
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff7.png
+buppos15 500 170
+action 1 15 8 16
+action 0 5 8 4
+timewait 8
+action 5 5
+timewait 2
+mes
+No... It's just...
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup8fadechg 8//フェードイン
+bup8 script/player/chara695_2 //
+name Chiyo 255
+mes
+...
+
+namedel
+bup8fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+action 0 5 8 4
+timewait 8
+action 5 5
+timewait 2
+mes
+No, it's... Nothing.
+
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup2fadechg 8//フェードイン
+bup2 script/player/chara2_1 //
+name Sara 255
+action 1 2 6 4
+timewait 8
+action 5 2
+timewait 2
+#voice 25 1
+mes
+Okay, good! Then let's head to
+the next event!
+
+namedel
+bup2fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+
+bup6fadechg 8//フェードイン
+bup6 script/player/chara114_101 //
+name Colette 255
+#se 1
+bup15 script/eff/eff3.png
+buppos15 500 260
+action 1 15 8 16
+mes
+Yay!
+I can't wait to see what's next!
+
+sub_bupdel 15
+namedel
+bup6fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bup5fadechg 8//フェードイン
+bup5 script/player/chara118_100 //
+name Tear 255
+#se 1
+bup15 script/eff/eff4.png
+buppos15 500 170
+action 1 15 8 16
+mes
+I can't believe the race is over
+and I'm still stuck wearing this...
+
+sub_bupdel 15
+namedel
+bup5fadeout 8
+fadewait
+timewait 4      //タイミング調整のため
+
+bupdel
+
+
+fadeout 24
+fadewait
+timewait 8
+
+
+#MFADE
