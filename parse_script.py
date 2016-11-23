@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     last_print = ""
 
-    with open(sys.argv[1]) as data:
+    with open(sys.argv[1], encoding="utf-8") as data:
         for line in data:
             line = line.split()
 
