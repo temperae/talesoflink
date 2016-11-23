@@ -1,7 +1,7 @@
 import sys
+import unicodedata
 
 if __name__ == '__main__':
-    # text = ""
     read_header = False
     curr_name = ""
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
                     continue
 
                 last_print = next_print
-                print(last_print)
+                print(unicodedata.normalize('NFKC', last_print))
 
                 continue
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
                     continue
 
                 last_print = next_print
-                print(last_print)
+                print(unicodedata.normalize('NFKC', last_print))
 
                 continue
 
